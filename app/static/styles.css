@@ -1,0 +1,60 @@
+body{
+  margin: 0;
+}
+#modelDiv {
+  width: 100%;
+  height: 100%;
+}
+
+#model {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#canvasDivShoe{
+  position: absolute;
+  display: block;
+}
+
+#materialDiv{
+  position: fixed;
+  height: 140px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  bottom: 0;
+  background-color: #f3f3f3;
+}
+
+#materialText {
+  text-align: center;
+  color: black;
+}
+
+.material {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+#materialTable{
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+
+.arrow{
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.label{
+  margin-left: auto;
+  margin-right: auto;
+}

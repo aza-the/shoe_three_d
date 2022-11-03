@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "fastapi-shoe"
+version = "0.1.0"
+description = "3D shoe web app"
+authors = ["Azamat Dzabaev <azamatdzabaev310@gmail.com>"]
+readme = "README.md"
+packages = [{include = "fastapi_shoe"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.85.2"
+jinja2 = "^3.1.2"
+uvicorn = "^0.19.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

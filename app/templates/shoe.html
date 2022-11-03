@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Shoe</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}">
+</head>
+<body>
+    <div id="modelDiv">
+        <div id="canvasDivShoe">
+            <canvas id="model"></canvas>
+        </div>
+        
+        <div id="materialDiv">
+            <table class="label">
+                <tr>
+                    <th><input type="image" id="leftArrow" class="arrow" src="{{ url_for('static', path='/shoe/img/arrowLeft.png') }}"></th>
+                    <th><p id="materialText">Choose the material</p></th>
+                    <th><input type="image" id="rightArrow" class="arrow" src="{{ url_for('static', path='/shoe/img/arrowRight.png') }}"></th>
+                </tr>
+            </table>
+          
+            <table id="materialTable"></table>
+        </div>
+    </div>
+
+
+    <script type="module" src="{{ url_for('static', path='/shoe/shoe.js') }}"></script>
+
+</body>
+</html>
