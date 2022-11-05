@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+#shoelogo {
+    position: fixed;
+    margin-left: 2%;
+    margin-top: 1.2%;
+    top: 0;
+    left: 0;
+}
+
+#shoelogo p {
+    font-family: monospace;
+    font-size: 3em;
+    font-weight: 1000;
+}
+
+
+/* main div */
+.main {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#infodiv {
+    display: table-cell;
+    vertical-align: middle;
+    width: 1000px;
+}   
+
+#maininfo {
+    display: table-cell;
+    background-color: rgb(90, 90, 90);
+    color: azure;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 1.5em;
+    vertical-align: middle;
+    width: 80%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#buttons {
+    display: table-cell;
+    vertical-align: middle;
+    background-color: rgb(180, 180, 180);
+    bottom: 0;
+    text-align: center;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#labeltolink {
+    font-family: monospace;
+    letter-spacing: 0.1px;
+}
+
+#btn1 {
+    font-family: monospace;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.666);
+    height: 50px;
+    width: 100px;
+}
+
+#aboutdiv {
+    font-family: monospace;
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+}

@@ -1,0 +1,28 @@
+.main {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.col {
+    top: 30%;
+    text-align: center;
+}
+
+.col h1 {
+    font-size: 70px;
+    font-weight: 1000;
+}
+
+.col p {
+    font-size: 25px;
+}
+
+.btn{
+    height: 55px;
+    font-size: 20px;
+}
+
+#btn1 {
+    width: 200px;
+}

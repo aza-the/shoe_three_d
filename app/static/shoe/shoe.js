@@ -1,7 +1,5 @@
-
 import * as THREE from './node_modules/three/build/three.module.js';
 import { GLTFLoader } from './node_modules/three/examples/jsm/loaders/GLTFLoader.js'
-import { DRACOLoader } from './node_modules/three/examples/jsm/loaders/DRACOLoader.js'
 import { OrbitControls } from './node_modules/three/examples/jsm/controls/OrbitControls.js';
 import { TWEEN } from './node_modules/three/examples/jsm/libs/tween.module.min.js';
 import Stats from './node_modules/three/examples/jsm/libs/stats.module.js';
@@ -157,7 +155,7 @@ const shvi = [
   'grayFabric2',
   'pixeledFabric',
   'blackPlastic',
-];
+];import { DRACOLoader } from './node_modules/three/examples/jsm/loaders/DRACOLoader.js'
 
 // left arrow click for choosing previous element of shoe
 const leftArrowPress = document.getElementById('leftArrow');
@@ -333,6 +331,7 @@ loader.load(
         {
           changeMaterial(o, 'brownPlastic');
           o.castShadow=true; // making a shadow using this part of shoe
+          console.log("Shadow casted");
         }
         else if(o.name == 'язык'){
           changeMaterial(o, 'brownLeather');
