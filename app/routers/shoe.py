@@ -1,13 +1,36 @@
 from fastapi import APIRouter, Request
+from fastapi.datastructures import Headers  #*for NotModifiedResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, Response
 
 route = APIRouter(tags=['shoe'])
 
 route.mount("/app/static", StaticFiles(directory="app/static"), name="static")
 
 templates = Jinja2Templates(directory="app/templates")
+
+
+class NotModifiedResponse(Response):
+    NOT_MODIFIED_HEADERS = (
+        "cache-control",
+        "content-location",
+        "date",
+        "etag",
+        "expires",
+        "vary",
+    )
+
+    def __init__(self, headers: Headers):
+        super().__init__(
+            status_code=304,
+            headers={
+                name: value
+                for name, value in headers.items()
+                if name in self.NOT_MODIFIED_HEADERS
+            },
+        )
+
 
 # Endpoint to html with that shows the shoe model
 @route.get("/shoe")

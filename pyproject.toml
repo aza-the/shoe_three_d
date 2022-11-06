@@ -4,7 +4,6 @@ version = "0.1.0"
 description = "3D shoe web app"
 authors = ["Azamat Dzabaev <azamatdzabaev310@gmail.com>"]
 readme = "README.md"
-packages = [{include = "fastapi_shoe"}]
 
 
 [tool.poetry.dependencies]
