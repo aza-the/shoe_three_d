@@ -309,7 +309,9 @@ function changeMaterial(ext_frame, src){
 // loading the 3d model
 let model;
 const loader = new GLTFLoader();  // basic gltf loader
+const percent_info = document.getElementById('materialText'); // to show how much model is loaded (in percent)
 
+// shoe loader
 loader.load(
   'shoe.glb',
   function ( gltf ){
@@ -366,7 +368,9 @@ loader.load(
     scene.add(model);
   },
   function ( xhr ){
-    console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' )
+    let loaded = ( xhr.loaded / xhr.total * 100 );
+    console.log( loaded.toFixed(0) + '% loaded' );
+    percent_info.textContent = loaded.toFixed(0) + '% loaded';
   },
   function( error ){
     console.log( error );
@@ -481,7 +485,7 @@ function getCanvasRelativePostion(event){
   };
 }
 
-function setPickPostion(event){
+function setPickPosition(event){
   const pos = getCanvasRelativePostion(event);
   pickPosition.x = (pos.x / canvas.width) * 2 - 1;
   pickPosition.y = (pos.y / canvas.height) * -2 + 1;
@@ -492,8 +496,20 @@ function clearPickPosition(){
   pickPosition.y = -100000;
 }
 
-window.addEventListener('mousedown', setPickPostion)
+window.addEventListener('mousedown', setPickPosition)
 window.addEventListener('mouseup', clearPickPosition);
+
+window.addEventListener('touchstart', (event) => {
+  // prevent the window from scrolling
+  event.preventDefault();
+  setPickPosition(event.touches[0]);
+}, {passive: false});
+ 
+window.addEventListener('touchmove', (event) => {
+  setPickPosition(event.touches[0]);
+});
+ 
+window.addEventListener('touchend', clearPickPosition);
 
 // animating the scene
 function render(time){

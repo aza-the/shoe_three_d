@@ -18,7 +18,7 @@
     <div class="main">
         <div id="infodiv">
             <div id="maininfo">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, illo! Quisquam, exercitationem libero! Aliquid, nam! Tenetur impedit, quam placeat beatae accusamus laudantium. Animi quasi voluptatem totam aliquid quidem quisquam et?</p>
+                <p>This site is the link to the 3D model of shoe where you can change the materials used and look at the new skinned shoe.</p>
             </div>
             <div id="buttons">
                 <p id="labeltolink">Link to model</p>
@@ -29,9 +29,10 @@
 
 
     <div id="aboutdiv">
-        <p id="designed">Designed by</p>
-        <p id="who">Dzabaev</p>
+        <p id="designed">Designed by Dzabaev</p>
     </div>
+
+    <img id="logo" src="{{ url_for('static', path='logo.png') }}" alt="">
 
     <script src="{{ url_for('static', path='/index.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

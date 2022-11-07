@@ -4,8 +4,6 @@ body {
     width: 100%;
 }
 
-
-
 #shoelogo {
     position: fixed;
     margin-left: 2%;
@@ -28,8 +26,8 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 19%;
+    margin-right:19%;
 }
 
 #infodiv {
@@ -76,8 +74,23 @@ body {
 }
 
 #aboutdiv {
+    margin-right: 20px;
     font-family: monospace;
     position: fixed;
     bottom: 0;
+    right: 0;
     padding: 10px;
+}
+
+#designed {
+    margin-right: 50px;
+}
+
+#logo {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 0;
+    right: 0;
+    margin: 15px;
 }
